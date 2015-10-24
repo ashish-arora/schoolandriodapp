@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:background="#0099ff">
+    <item
+        android:id="@+id/attendance"
+        android:orderInCategory="100"
+        android:title="@string/attendance"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/profile"
+        android:orderInCategory="100"
+        android:title="@string/profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/events_feed"
+        android:orderInCategory="100"
+        android:title="@string/events_feed"
+        app:showAsAction="never" />
+</menu>

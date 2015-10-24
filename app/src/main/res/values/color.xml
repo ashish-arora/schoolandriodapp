@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="viewColor">#52ffff</color>
+    <color name="textColor">#47c9f3</color>
+    <color name="actionBarbg">#0099ff</color>
+    <color name="childNameTxtColor">#a927ff</color>
+    <color name="childViewbg">#0066ff</color>
+    <color name="studentTxtColor">#23a7ff</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="tabColor">#0099ff</color>
+</resources>

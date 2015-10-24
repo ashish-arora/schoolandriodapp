@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/yourChildListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/yourChildRadioBtn"
+            android:layout_weight="0.3"
+            android:visibility="visible"
+            android:checked="false" />
+
+        <TextView
+            android:id="@+id/childNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.2"
+            android:textColor="@color/studentTxtColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/teacherClassTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:textColor="@color/studentTxtColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/schoolTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.6"
+            android:textColor="@color/studentTxtColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/presenttodayTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.3"
+            android:textColor="@color/studentTxtColor"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="false"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/teacherClassListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:divider="@color/viewColor"
+        android:dividerHeight="1dp"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/viewRollNo"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txtRollNo"
+        android:layout_marginTop="0dp"
+        android:background="@color/viewColor"  />
+
+</LinearLayout>

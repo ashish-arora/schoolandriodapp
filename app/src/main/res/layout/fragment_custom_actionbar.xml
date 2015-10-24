@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingRight="0dp"
+    android:background="@color/actionBarbg">
+
+    <ImageView
+        android:id="@+id/imgSlideManu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow"
+        android:visibility="gone"
+        android:onClick="clickEvent"/>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:text="Events feed"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imgSearch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_search"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/imgSlideManu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/imgCheckbox"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_check_box_outline"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/imgSlideManu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/imgEventsFeed"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_search"
+        android:visibility="gone"
+        android:layout_marginRight="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
