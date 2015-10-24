@@ -31,7 +31,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+
         thisActivity = getActivity();
         mAlertDialogBuilder = new AlertDialog.Builder(getActivity());
         super.onCreate(savedInstanceState);
