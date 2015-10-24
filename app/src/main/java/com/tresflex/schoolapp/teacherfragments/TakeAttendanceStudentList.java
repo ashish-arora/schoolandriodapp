@@ -82,13 +82,13 @@ public class TakeAttendanceStudentList extends BaseFragment implements View.OnCl
         takeAttendanceListView = (ListView) mView.findViewById(R.id.takeAttendanceListView);
         saveBtn = (Button) mView.findViewById(R.id.takeAttendanceSaveBtn);
         saveBtn.setOnClickListener(this);
-        saveBtn.setVisibility(View.INVISIBLE);
+        saveBtn.setVisibility(View.VISIBLE);
         alertText=(TextView)mView.findViewById(R.id.alertText);
 
         if (AppPreferences.getAddStudentList(thisActivity).equals("")) {
             //showAlertDialogStudet("School App", "Add Student");
             alertText.setVisibility(View.VISIBLE);
-            alertText.setText("No Student List");
+            alertText.setText(Constants.ALERT_TEXT);
         } else {
 
             alertText.setVisibility(View.INVISIBLE);
@@ -107,7 +107,7 @@ public class TakeAttendanceStudentList extends BaseFragment implements View.OnCl
         mAlertDialogBuilder.setTitle(title);
         mAlertDialogBuilder.setMessage(message);
         mAlertDialogBuilder.setCancelable(false);
-        mAlertDialogBuilder.setNegativeButton("OK",
+        mAlertDialogBuilder.setNegativeButton(Constants.OK,
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -125,7 +125,7 @@ public class TakeAttendanceStudentList extends BaseFragment implements View.OnCl
 
         switch (v.getId()) {
             case R.id.takeAttendanceSaveBtn:
-                Toast.makeText(thisActivity, "Details Saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(thisActivity, Constants.SAVE_TEXT, Toast.LENGTH_SHORT).show();
                 break;
         }
     }

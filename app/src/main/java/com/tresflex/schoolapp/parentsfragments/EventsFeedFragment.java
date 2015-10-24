@@ -35,7 +35,7 @@ public class EventsFeedFragment extends BaseFragment {
     int[] homeImg = {R.drawable.desert, R.drawable.desert, R.drawable.desert, R.drawable.desert, R.drawable.desert};
     int[] schoolImg = {R.drawable.desert, R.drawable.hydrangeas, R.drawable.lighthouse, R.drawable.desert, R.drawable.hydrangeas};
     String[] title = {"House Swimming Carnival 20th August", "Camp bus is running late. ETA 4.45", "Kinder Room update 30 jul", "House Swimming Carnival 20th August", "Camp bus is running late. ETA 4.45"};
-    String[] tiledescription = {"The House Swimming Carnival will be soon upon us ", "Due to late departure the bus from the year 3 camp is not due until 4.45pm", "The Childre have lovely day today", "The House Swimming Carnival will be soon upon us ", "House Swimming Carnival 20th August"};
+    String[] tiledescription = {"The House Swimming Carnival will be soon upon us ", "Due to late departure the bus from the year 3 camp is not due until 4.45pm", "The Childre have lovely day today", "The House Swimming Carnival will be soon upon us ", "House Swimming Carnival 20th August,The House Swimming Carnival will be soon upon us"};
     String[] date1 = {"Primary School", "Primary School", "Primary School", "Primary School", "Primary School"};
     String[] date2 = {"23-jul-2013", "23-jul-2013", "23-jul-2013", "23-jul-2013", "23-jul-2013"};
 

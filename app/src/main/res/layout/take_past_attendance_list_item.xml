@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -13,7 +14,7 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <TextView
+        <com.tresflex.schoolapp.helper.MyTextView
             android:id="@+id/rollNotxtP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -22,9 +23,11 @@
             android:layout_weight="1"
             android:text="@string/roll_no"
             android:textColor="@color/studentTxtColor"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            customfontdemo:fontName="@string/font_textstyle" />
 
-        <TextView
+        <com.tresflex.schoolapp.helper.MyTextView
+
             android:id="@+id/nameTxtP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -32,9 +35,11 @@
             android:layout_weight="1"
             android:text="@string/roll_no"
             android:textColor="@color/studentTxtColor"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            customfontdemo:fontName="@string/font_textstyle" />
 
-        <TextView
+        <com.tresflex.schoolapp.helper.MyTextView
+
             android:id="@+id/presentTxtP"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,8 +47,7 @@
             android:layout_weight="1"
             android:text="@string/roll_no"
             android:textColor="@color/studentTxtColor"
-            android:textSize="20sp" />
-
-
+            android:textSize="20sp"
+            customfontdemo:fontName="@string/font_textstyle" />
     </LinearLayout>
 </LinearLayout>

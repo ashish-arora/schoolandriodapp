@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,50 +18,51 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/desert" />
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/titleTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/homeImg"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="10dp"
         android:layout_toRightOf="@+id/homeImg"
         android:padding="3dp"
         android:text=""
-        android:textSize="19sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        customfontdemo:fontName="@string/font_textstyle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:id="@+id/imgSchool"
         android:layout_width="wrap_content"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_alignLeft="@+id/titleTxt"
         android:layout_alignStart="@+id/titleTxt"
         android:layout_below="@+id/titleTxt"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/hydrangeas"/>
+        android:src="@drawable/hydrangeas"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/descriptionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imgSchool"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_alignStart="@+id/imgSchool"
         android:layout_below="@+id/imgSchool"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:padding="3dp"
         android:text=""
         android:textSize="17sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        customfontdemo:fontName="@string/font_textstyle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/dateTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,9 +73,10 @@
         android:padding="3dp"
         android:text="xxxxxxxx"
         android:textSize="17sp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        customfontdemo:fontName="@string/font_textstyle"/>
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/dateTxt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,5 +86,7 @@
         android:textColor="@android:color/black"
         android:layout_alignTop="@+id/dateTxt"
         android:layout_toRightOf="@+id/dateTxt"
-        android:layout_toEndOf="@+id/dateTxt" />
+        customfontdemo:fontName="@string/font_textstyle"
+        android:layout_alignRight="@+id/descriptionTxt"
+        android:layout_alignEnd="@+id/descriptionTxt" />
 </RelativeLayout>

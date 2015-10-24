@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
         imgSearch.setVisibility(View.GONE);
         imgEventsFeed.setVisibility(View.GONE);
         imgSearch.setImageResource(R.drawable.ic_search);
-        imgSlider.setImageResource(R.drawable.ic_arrow);
+        //imgSlider.setImageResource(R.drawable.ic_arrow_left_th);
 
         AppPreferences.setUserType(context, Constants.TYPE_TEACHERS);
         // AppPreferences.setUserType(context, Constants.TYPE_CHILD);
@@ -163,7 +163,6 @@ public class MainActivity extends Activity {
     @Override
     public void onBackPressed() {
 
-        super.onBackPressed();
         // TODO Auto-generated method stub
         back();
     }

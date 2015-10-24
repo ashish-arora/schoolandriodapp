@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,17 +19,18 @@
             android:layout_marginRight="10dp"
             android:background="#cc00ff" />
 
-        <TextView
+        <com.tresflex.schoolapp.helper.MyTextView
             android:id="@+id/termsTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="@string/terms"
             android:textColor="#a8a8ff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            customfontdemo:fontName="@string/font_textstyle"/>
     </LinearLayout>
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/welcomeTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,9 +38,10 @@
         android:layout_marginTop="0dp"
         android:text="@string/welcome_to"
         android:textColor="#5555ff"
-        android:textSize="23sp" />
+        android:textSize="23sp"
+        customfontdemo:fontName="@string/font_textstyle"/>
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/schoolchapTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +50,8 @@
         android:text="@string/school_chap"
         android:textColor="#9966ff"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        customfontdemo:fontName="@string/font_textstyle"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -68,7 +71,7 @@
         android:textColor="#99ffff"
         android:textStyle="bold" />
 
-    <TextView
+    <com.tresflex.schoolapp.helper.MyTextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,6 +79,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/school_bottmTxt"
         android:textColor="#dc4bff"
-        android:textSize="23sp" />
+        android:textSize="23sp"
+        customfontdemo:fontName="@string/font_textstyle"/>
 
 </LinearLayout>

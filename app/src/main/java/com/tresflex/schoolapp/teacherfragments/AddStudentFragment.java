@@ -54,7 +54,7 @@ public class AddStudentFragment extends BaseFragment implements View.OnClickList
         MainActivity.imgSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(thisActivity, "Clicked", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(thisActivity, "Clicked", Toast.LENGTH_SHORT).show();
                 getFragmentManager().popBackStackImmediate();
             }
         });

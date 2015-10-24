@@ -2,10 +2,12 @@
 <resources>
     <color name="viewColor">#52ffff</color>
     <color name="textColor">#47c9f3</color>
-    <color name="actionBarbg">#0099ff</color>
+    <color name="actionBarbg">#9040B2</color>
     <color name="childNameTxtColor">#a927ff</color>
     <color name="childViewbg">#0066ff</color>
     <color name="studentTxtColor">#23a7ff</color>
     <color name="background_tab_pressed">#6633B5E5</color>
-    <color name="tabColor">#0099ff</color>
+    <color name="tabColor">#D6DBE7</color>
+    <color name="tabTxtColor">#b097c4</color>
+    <color name="titleBarColor">#0099ff</color>
 </resources>

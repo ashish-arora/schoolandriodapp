@@ -73,9 +73,9 @@ public class ClassesFragment extends BaseFragment {
 
     private void initialize() {
 
-        teacherClassList.add("Class 1A");
-        teacherClassList.add("Class 1B");
-        teacherClassList.add("Class 1C");
+        teacherClassList.add(Constants.CLASS_1A);
+        teacherClassList.add(Constants.CLASS_1B);
+        teacherClassList.add(Constants.CLASS_1C);
         teacherClassListView = (ListView) mView.findViewById(R.id.teacherClassListView);
         teacherClassAdapter = new TeacherClassAdapter(thisActivity, teacherClassList);
         teacherClassListView.setAdapter(teacherClassAdapter);
@@ -100,7 +100,7 @@ public class ClassesFragment extends BaseFragment {
                         classeBTransaction.add(R.id.container, classBFragment, Constants.CLASS_1A);
                         classeBTransaction.addToBackStack(Constants.CLASS_1A);
                         classeBTransaction.commit();
-                        Toast.makeText(thisActivity, "Class 1B ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(thisActivity, Constants.CLASS_1B, Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
                         ClassOneA classCFragment = new ClassOneA();
@@ -109,7 +109,7 @@ public class ClassesFragment extends BaseFragment {
                         classeCTransaction.add(R.id.container, classCFragment, Constants.CLASS_1A);
                         classeCTransaction.addToBackStack(Constants.CLASS_1A);
                         classeCTransaction.commit();
-                        Toast.makeText(thisActivity, "Class 1C ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(thisActivity, Constants.CLASS_1C, Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         break;

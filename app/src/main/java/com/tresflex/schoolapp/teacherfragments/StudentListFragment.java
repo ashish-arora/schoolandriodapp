@@ -60,7 +60,7 @@ public class StudentListFragment extends BaseFragment implements View.OnClickLis
         MainActivity.imgSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(thisActivity, "Clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(thisActivity, "Clicked", Toast.LENGTH_SHORT).show();
                 getFragmentManager().popBackStackImmediate();
             }
         });
@@ -77,7 +77,7 @@ public class StudentListFragment extends BaseFragment implements View.OnClickLis
 
         if (AppPreferences.getAddStudentList(thisActivity).equals("")) {
             alertText.setVisibility(View.VISIBLE);
-            alertText.setText("No Student List");
+            alertText.setText(Constants.ALERT_TEXT);
         } else {
             alertText.setVisibility(View.INVISIBLE);
             String json = AppPreferences.getAddStudentList(thisActivity);

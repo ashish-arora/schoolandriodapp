@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customfontdemo="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
@@ -17,7 +18,7 @@
             android:clickable="true"
             android:orientation="vertical">
 
-            <EditText
+            <com.tresflex.schoolapp.helper.MyEditText
                 android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,7 +37,8 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                customfontdemo:fontName="@string/font_textstyle"/>
 
             <View
                 android:id="@+id/viewName"
@@ -48,7 +50,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@color/viewColor" />
 
-            <EditText
+            <com.tresflex.schoolapp.helper.MyEditText
                 android:id="@+id/txtRollNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +70,8 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                customfontdemo:fontName="@string/font_textstyle"/>
 
             <View
                 android:id="@+id/viewRollNo"
@@ -80,7 +83,7 @@
                 android:layout_marginTop="0dp"
                 android:background="@color/viewColor"  />
 
-            <EditText
+            <com.tresflex.schoolapp.helper.MyEditText
                 android:id="@+id/txtFathersName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,7 +102,8 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                customfontdemo:fontName="@string/font_textstyle"/>
 
             <View
                 android:id="@+id/viewFathersName"
@@ -111,7 +115,7 @@
                 android:layout_marginTop="0dp"
                 android:background="@color/viewColor"  />
 
-            <EditText
+            <com.tresflex.schoolapp.helper.MyEditText
                 android:id="@+id/txtMothersName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,7 +134,8 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                customfontdemo:fontName="@string/font_textstyle"/>
 
             <View
                 android:id="@+id/viewMothersname"
@@ -142,7 +147,7 @@
                 android:layout_marginTop="0dp"
                 android:background="@color/viewColor"  />
 
-            <EditText
+            <com.tresflex.schoolapp.helper.MyEditText
                 android:id="@+id/txtFathersNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,7 +167,8 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                customfontdemo:fontName="@string/font_textstyle"/>
 
             <View
                 android:id="@+id/viewFathersMobileNo"
@@ -174,7 +180,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@color/viewColor" />
 
-            <EditText
+            <com.tresflex.schoolapp.helper.MyEditText
                 android:id="@+id/txtMothersNo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -194,7 +200,8 @@
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                customfontdemo:fontName="@string/font_textstyle"/>
 
             <Button
 

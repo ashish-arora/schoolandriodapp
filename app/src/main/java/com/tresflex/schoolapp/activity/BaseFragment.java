@@ -12,6 +12,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 
+import com.tresflex.schoolapp.helper.Constants;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -53,7 +55,7 @@ public abstract class BaseFragment extends Fragment {
         }
         mAlertDialogBuilder.setMessage(message);
         mAlertDialogBuilder.setCancelable(false);
-        mAlertDialogBuilder.setNegativeButton("OK",
+        mAlertDialogBuilder.setNegativeButton(Constants.OK,
                 new OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
