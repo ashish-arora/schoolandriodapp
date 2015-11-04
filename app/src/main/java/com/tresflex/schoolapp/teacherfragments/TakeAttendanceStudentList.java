@@ -2,9 +2,9 @@ package com.tresflex.schoolapp.teacherfragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +18,16 @@ import com.google.gson.reflect.TypeToken;
 import com.tresflex.schoolapp.R;
 import com.tresflex.schoolapp.activity.BaseFragment;
 import com.tresflex.schoolapp.activity.MainActivity;
-import com.tresflex.schoolapp.adapter.StudentListAdapter;
 import com.tresflex.schoolapp.adapter.TakeAttendanceAdapter;
+import com.tresflex.schoolapp.db.DBConstants;
 import com.tresflex.schoolapp.helper.AppPreferences;
 import com.tresflex.schoolapp.helper.Constants;
+import com.tresflex.schoolapp.helper.HttpRequests;
 import com.tresflex.schoolapp.model.TeacherAddStudent;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class TakeAttendanceStudentList extends BaseFragment implements View.OnClickListener {
@@ -38,12 +40,18 @@ public class TakeAttendanceStudentList extends BaseFragment implements View.OnCl
     TakeAttendanceAdapter takeAttendanceAdapter;
     AlertDialog.Builder mAlertDialogBuilder;
     TextView alertText;
+    ArrayList<TeacherAddStudent> student_list = new ArrayList<TeacherAddStudent>();
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
+
+
+    String[] studentName={"Joy", "Happy"};
+    Long[] studentRollNo={12L, 14L};
+
 
     public static TakeAttendanceStudentList newInstance(String param1, String param2) {
         TakeAttendanceStudentList fragment = new TakeAttendanceStudentList();
@@ -97,7 +105,13 @@ public class TakeAttendanceStudentList extends BaseFragment implements View.OnCl
             Gson gson = new Gson();
             Type type = new TypeToken<ArrayList<TeacherAddStudent>>() {}.getType();
             ArrayList<TeacherAddStudent> studentList = gson.fromJson(json, type);
-            takeAttendanceAdapter = new TakeAttendanceAdapter(thisActivity, studentList);
+            for (int i=0; i < studentName.length; i++){
+                TeacherAddStudent student = new TeacherAddStudent();
+                student.setStudentName(studentName[i]);
+                student.setRollNo(studentRollNo[i]);
+                student_list.add(student);
+            }
+            takeAttendanceAdapter = new TakeAttendanceAdapter(thisActivity, student_list);
             takeAttendanceListView.setAdapter(takeAttendanceAdapter);
         }
     }
@@ -125,6 +139,9 @@ public class TakeAttendanceStudentList extends BaseFragment implements View.OnCl
 
         switch (v.getId()) {
             case R.id.takeAttendanceSaveBtn:
+                HashMap<String, Integer> attendanceData= new HashMap<String,Integer>();
+                Strint result = HttpRequests.postAttendance(attendanceData);
+                Log.d(DBConstants.TAG, "post attendance result: " + result);
                 Toast.makeText(thisActivity, Constants.SAVE_TEXT, Toast.LENGTH_SHORT).show();
                 break;
         }

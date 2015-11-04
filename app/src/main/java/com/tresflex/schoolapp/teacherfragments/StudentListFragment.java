@@ -2,7 +2,6 @@ package com.tresflex.schoolapp.teacherfragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,14 +9,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.tresflex.schoolapp.R;
 import com.tresflex.schoolapp.activity.BaseFragment;
 import com.tresflex.schoolapp.activity.MainActivity;
-import com.tresflex.schoolapp.adapter.EventsFeedAdapter;
 import com.tresflex.schoolapp.adapter.StudentListAdapter;
 import com.tresflex.schoolapp.helper.AppPreferences;
 import com.tresflex.schoolapp.helper.Constants;
@@ -40,6 +37,11 @@ public class StudentListFragment extends BaseFragment implements View.OnClickLis
     StudentListAdapter studentListAdapter;
     AlertDialog.Builder mAlertDialogBuilder;
     TextView alertText;
+    List<TeacherAddStudent> studentList = new ArrayList<TeacherAddStudent>();
+
+    String[] studentName={"Joy", "Happy"};
+    Long[] studentRollNo={12L, 14L};
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,12 @@ public class StudentListFragment extends BaseFragment implements View.OnClickLis
     }
 
     private void initialize() {
+        for (int i=0; i< studentName.length; i++){
+            TeacherAddStudent student= new TeacherAddStudent();
+            student.setStudentName(studentName[i]);
+            student.setRollNo(studentRollNo[i]);
+            studentList.add(student);
+        }
         studentListView = (ListView) mView.findViewById(R.id.studentListView);
         //saveBtn = (Button) mView.findViewById(R.id.saveSutdentListBtn);
         //saveBtn.setOnClickListener(this);
@@ -85,7 +93,7 @@ public class StudentListFragment extends BaseFragment implements View.OnClickLis
             Gson gson = new Gson();
             Type type = new TypeToken<ArrayList<TeacherAddStudent>>() {
             }.getType();
-            ArrayList<TeacherAddStudent> studentList = gson.fromJson(json, type);
+            //ArrayList<TeacherAddStudent> studentList = gson.fromJson(json, type);
             studentListAdapter = new StudentListAdapter(thisActivity, studentList);
             studentListView.setAdapter(studentListAdapter);
         }

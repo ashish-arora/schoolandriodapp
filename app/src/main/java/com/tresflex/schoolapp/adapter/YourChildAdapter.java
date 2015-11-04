@@ -61,11 +61,15 @@ public class YourChildAdapter extends BaseAdapter {
             teacherClassTxt.setText(yourChildList.get(position).getTeacherClass());
             schoolTxt.setText(yourChildList.get(position).getSchool());
             presenttodayTxt.setText(yourChildList.get(position).getPresentToday());
-            if (yourChildList.get(position).getPresentToday().equalsIgnoreCase("Yes")) {
+            /*if (yourChildList.get(position).getPresentToday().equalsIgnoreCase("Yes")) {
                 yourChildRadioBtn.setChecked(true);
             } else {
                 yourChildRadioBtn.setChecked(false);
+            }*/
+            if (position == 0) {
+                yourChildRadioBtn.setChecked(true);
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

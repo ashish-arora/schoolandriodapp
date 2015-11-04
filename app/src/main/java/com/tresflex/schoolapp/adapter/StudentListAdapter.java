@@ -1,6 +1,5 @@
 package com.tresflex.schoolapp.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tresflex.schoolapp.R;
-import com.tresflex.schoolapp.model.EventsFeed;
 import com.tresflex.schoolapp.model.TeacherAddStudent;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,10 +18,10 @@ import java.util.List;
  */
 public class StudentListAdapter extends BaseAdapter {
 
-    private final ArrayList<TeacherAddStudent> studentList;
+    private final List<TeacherAddStudent> studentList;
     private final Context context;
 
-    public StudentListAdapter(Context context, ArrayList<TeacherAddStudent> studentList) {
+    public StudentListAdapter(Context context, List<TeacherAddStudent> studentList) {
         this.context = context;
         this.studentList = studentList;
     }
@@ -58,7 +55,9 @@ public class StudentListAdapter extends BaseAdapter {
 
             //  Picasso.with(context).load(eventsList.get(position).getSchoolUrl()).into(schoolImg);
             studentListImg.setImageResource(R.drawable.ic_close);
-            rollNo.setText(studentList.get(position).getRollNo().toString());
+            //rollNo.setText(studentList.get(position).getRollNo().toString());
+            //studentName.setText(studentList.get(position).getStudentName());
+            rollNo.setText(String.valueOf(studentList.get(position).getRollNo()));
             studentName.setText(studentList.get(position).getStudentName());
 
         } catch (Exception e) {

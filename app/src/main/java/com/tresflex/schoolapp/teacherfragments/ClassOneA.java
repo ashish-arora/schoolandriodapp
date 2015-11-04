@@ -3,9 +3,6 @@ package com.tresflex.schoolapp.teacherfragments;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -15,9 +12,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
-import android.widget.TabWidget;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tresflex.schoolapp.R;
 import com.tresflex.schoolapp.activity.BaseFragment;
@@ -71,6 +65,7 @@ public class ClassOneA extends BaseFragment implements TabHost.OnTabChangeListen
         List<Fragment> fragments = new Vector<Fragment>();
         fragments.add(Fragment.instantiate(thisActivity, StudentListFragment.class.getName()));
         fragments.add(Fragment.instantiate(thisActivity, AddStudentFragment.class.getName()));
+        fragments.add(Fragment.instantiate(thisActivity, TakeAttendanceStudentList.class.getName()));
         // viewPagerAdapter = new PagerAdapter(getFragmentManager(), fragments);
         viewPagerAdapter = new PagerAdapter(getChildFragmentManager(), fragments);
         viewPager = (ViewPager) mView.findViewById(R.id.viewpager);
@@ -85,6 +80,7 @@ public class ClassOneA extends BaseFragment implements TabHost.OnTabChangeListen
         AddTab addTab = new AddTab(thisActivity, tabHost);
         addTab.addTab(Constants.STUDENT_LIST, Constants.STUDENT_LIST, -1);
         addTab.addTab(Constants.ADD_STUDENT, Constants.ADD_STUDENT, -1);
+        addTab.addTab(Constants.TAKE_ATTENDANCE, Constants.TAKE_ATTENDANCE, -1);
         tabHost.setOnTabChangedListener(this);
     }
 

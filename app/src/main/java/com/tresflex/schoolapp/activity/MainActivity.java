@@ -13,15 +13,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tresflex.schoolapp.R;
 import com.tresflex.schoolapp.helper.AppPreferences;
 import com.tresflex.schoolapp.helper.Constants;
+import com.tresflex.schoolapp.helper.SessionManager;
 import com.tresflex.schoolapp.parentsfragments.AttendanceFragment;
 import com.tresflex.schoolapp.parentsfragments.EventsFeedFragment;
 import com.tresflex.schoolapp.parentsfragments.YourChildFragment;
 import com.tresflex.schoolapp.teacherfragments.ClassesFragment;
+import com.tresflex.schoolapp.teacherfragments.HomeWorkFragment;
 import com.tresflex.schoolapp.teacherfragments.TakeAttendanceFragment;
 
 public class MainActivity extends Activity {
@@ -32,9 +33,14 @@ public class MainActivity extends Activity {
     public static ImageView imgEventsFeed;
     Context context;
 
+    // Session Manager Class
+    SessionManager session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        session = new SessionManager(getApplicationContext());
+
         setContentView(R.layout.activity_main);
         context = MainActivity.this;
         mActionBar = getActionBar();
@@ -60,13 +66,14 @@ public class MainActivity extends Activity {
         //imgSlider.setImageResource(R.drawable.ic_arrow_left_th);
 
         AppPreferences.setUserType(context, Constants.TYPE_TEACHERS);
-        // AppPreferences.setUserType(context, Constants.TYPE_CHILD);
+        //AppPreferences.setUserType(context, Constants.TYPE_CHILD);
         EventsFeedFragment eventsFeedFragment = new EventsFeedFragment();
         FragmentTransaction eventsTransaction = getFragmentManager()
                 .beginTransaction();
         eventsTransaction.add(R.id.container, eventsFeedFragment, Constants.EVENTS_FEED);
         eventsTransaction.addToBackStack(Constants.EVENTS_FEED);
         eventsTransaction.commit();
+
     }
 
     @Override
@@ -143,6 +150,14 @@ public class MainActivity extends Activity {
                     showAttendanceTransaction.add(R.id.container, showAttendanceFragment, Constants.TAKE_ATTENDANCE);
                     showAttendanceTransaction.addToBackStack(Constants.TAKE_ATTENDANCE);
                     showAttendanceTransaction.commit();
+                    break;
+                case R.id.homework:
+                    HomeWorkFragment homeWorkFragment = new HomeWorkFragment();
+                    FragmentTransaction homeWorkTransaction = getFragmentManager()
+                            .beginTransaction();
+                    homeWorkTransaction.replace(R.id.container, homeWorkFragment, Constants.HOMEWORK);
+                    homeWorkTransaction.addToBackStack(Constants.HOMEWORK);
+                    homeWorkTransaction.commit();
                     break;
                 default:
                     break;

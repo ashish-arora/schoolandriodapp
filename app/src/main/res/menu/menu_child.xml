@@ -18,4 +18,9 @@
         android:orderInCategory="100"
         android:title="@string/events_feed"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/my_calendar"
+        android:orderInCategory="100"
+        android:title="@string/calendar"
+        app:showAsAction="never" />
 </menu>

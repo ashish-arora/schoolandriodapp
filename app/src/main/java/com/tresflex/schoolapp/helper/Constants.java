@@ -17,6 +17,7 @@ public class Constants {
     public static final String ENTER_MOTHERS_NAME = "Please enter mother's name";
     public static final String ENTER_FATHERS_No = "Please enter father's mobile number";
     public static final String ENTER_MOTHERS_No = "Please enter mother's mobile number";
+    public static final String MATHS = "Maths";
 
     //Classes
     //Past attendance page
@@ -32,6 +33,7 @@ public class Constants {
     public static final String TYPE_TEACHERS = "Teachers";
     public static final String CLASSES = "Classes";
     public static final String TAKE_ATTENDANCE = "Take Attendance";
+    public static final String HOMEWORK = "Homework";
     public static final String PAST_ATTENDANCE = "Past Attendance";
     public static final String BACK_STACK = "getFragmentManager().getBackStackEntryCount() === ";
     public static final String ACTION_BAR_COLOR = "#9040B2";

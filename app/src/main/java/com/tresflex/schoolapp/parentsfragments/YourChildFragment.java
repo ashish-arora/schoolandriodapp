@@ -25,12 +25,16 @@ public class YourChildFragment extends Fragment {
     ListView yourChidListView;
     YourChildAdapter yourChildAdapter;
     List<YourChild> yourChildList = new ArrayList<YourChild>();
-
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
+
+    String[] childNames = {"Joy", "Happy"};
+    String[] childsSchool = {"DPS", "MVN"};
+    String[] childsClass = {"class 1A", "class 2B"};
+    String[] childsPresent = {"Yes", "No"};
 
     public static YourChildFragment newInstance(String param1, String param2) {
         YourChildFragment fragment = new YourChildFragment();
@@ -64,6 +68,14 @@ public class YourChildFragment extends Fragment {
     }
 
     private void initialize() {
+        for (int i = 0; i < childNames.length; i++) {
+            YourChild your_child = new YourChild();
+            your_child.setChildName(childNames[i]);
+            your_child.setSchool(childsSchool[i]);
+            your_child.setTeacherClass(childsClass[i]);
+            your_child.setPresentToday(childsPresent[i]);
+            yourChildList.add(your_child);
+        }
         yourChidListView = (ListView) mView.findViewById(R.id.yourChildListView);
         yourChildAdapter = new YourChildAdapter(thisActivity, yourChildList);
         yourChidListView.setAdapter(yourChildAdapter);

@@ -35,6 +35,9 @@
     <string name="present_today">Present-Today</string>
     <string name="show_past_attendance">Show Past Attendance</string>
     <string name="present">Present</string>
+    <string name="calendar">Calendar</string>
 
     <string name="font_textstyle">futuramedium.ttf</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="homework">Homework</string>
 </resources>

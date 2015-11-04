@@ -18,4 +18,9 @@
         android:orderInCategory="100"
         android:title="@string/show_attendance"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/homework"
+        android:orderInCategory="100"
+        android:title="@string/homework"
+        app:showAsAction="never" />
 </menu>
